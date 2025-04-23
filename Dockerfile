@@ -4,7 +4,7 @@ ARG NODE_VERSION=18.0.0
 
 FROM node:${NODE_VERSION}-alpine AS base
 WORKDIR /usr/src/app
-EXPOSE 3001
+EXPOSE 3000
 
 FROM base AS dev
 RUN --mount=type=bind,source=package.json,target=package.json \
